@@ -5,7 +5,6 @@ const createUserController = async (req, res) => {
     const token = await create(req.body);
     return res.status(201).json(token);
   } catch (error) {
-    console.log(error);
     return res.status(409).json({ message: error.message });
   }
 };
