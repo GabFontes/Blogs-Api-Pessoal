@@ -1,6 +1,6 @@
 const { User } = require('../../models');
 
-const tokenValidation = require('../../middlewares/tokenValidation');
+const { tokenValidation } = require('../../middlewares/tokenValidation');
 
 const listUserService = async (token) => {
   try {

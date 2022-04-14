@@ -1,4 +1,4 @@
-const tokenValidation = require('../../middlewares/tokenValidation');
+const { tokenValidation } = require('../../middlewares/tokenValidation');
 const { User } = require('../../models');
 
 const listUserByIdService = async (id, token) => {

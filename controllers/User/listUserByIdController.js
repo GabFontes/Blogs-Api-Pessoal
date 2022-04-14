@@ -2,8 +2,6 @@ const { listById } = require('../../services/User');
 
 const listUserByIdController = async (req, res) => {
   try {
-    if (!req.headers.authorization) return res.status(401).json({ message: 'Token not found' });
-
     const user = await listById(req.params.id, req.headers.authorization);
     if (!user) return res.status(404).json({ message: 'User does not exist' });
     return res.status(200).json(user);

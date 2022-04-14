@@ -1,5 +1,5 @@
 const { Category } = require('../../models');
-const tokenValidation = require('../../middlewares/tokenValidation');
+const { tokenValidation } = require('../../middlewares/tokenValidation');
 
 const createCategoryService = async (token, name) => {
   try {

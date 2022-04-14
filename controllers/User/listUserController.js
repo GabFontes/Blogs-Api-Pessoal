@@ -2,7 +2,6 @@ const { list } = require('../../services/User');
 
 const listUserController = async (req, res) => {
   try {
-    if (!req.headers.authorization) return res.status(401).json({ message: 'Token not found' });
     const users = await list(req.headers.authorization);
 
     return res.status(200).json(users);
