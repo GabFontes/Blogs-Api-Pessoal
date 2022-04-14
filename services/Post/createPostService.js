@@ -16,7 +16,7 @@ const createPostService = async (token, data) => {
 
     if (verify) return { message: '"categoryIds" not found', status: 400 };
 
-    const created = await BlogPost.create({ title, content, categoryIds });
+    const created = await BlogPost.create({ title, content, categoryIds, userId: id });
 
     return { ...created, userId: id };
   } catch (error) {
