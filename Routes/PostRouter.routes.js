@@ -13,5 +13,6 @@ postRouter.put('/:id',
   updatePostValidation,
   verifyIfUserIsAuthorized,
   postController.update);
+postRouter.delete('/:id', tokenNotFound, verifyIfUserIsAuthorized, postController.remove);
 
 module.exports = postRouter;
